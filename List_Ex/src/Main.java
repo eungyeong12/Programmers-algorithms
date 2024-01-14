@@ -58,6 +58,14 @@ public class Main {
 
         List<MyData> list4 = new ArrayList<>();
         method1(list4);
+
+        // List
+        // 여러 개의 데이터를 한꺼번에 다룰 수 있다.
+        // 메모리상에 연속되지 않아도 된다.
+        // 미리 공간을 확보해 놓지 않아도 된다.
+        // 필요에 따라 데이터가 늘어나거나 줄어든다.
+        // 첫 번째 위치로부터 index로 목표위치를 알려면 한 칸 한 칸 이동하면서 찾아야 한다.
+        
     }
 
     static void method1(List<MyData> list) {
