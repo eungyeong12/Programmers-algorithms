@@ -21,7 +21,20 @@ public class Main {
         int[] arr = {1, 3, 5, 4, 5, 2, 1};
         System.out.println(Arrays.toString(solution(arr)));
     }
+
     static int[] solution(int[] arr) {
+        int max = 0;
+        for(int a : arr) if(a > max) max = a;
+
+        List<Integer> list = new LinkedList<>();
+        for(int i=0; i<arr.length; i++) {
+            if(arr[i] == max) list.add(i);
+        }
+
+        return list.stream().mapToInt(Integer::intValue).toArray();
+    }
+
+    static int[] solution2(int[] arr) {
         int max = Arrays.stream(arr).max().getAsInt();
 
         return IntStream.range(0, arr.length)
